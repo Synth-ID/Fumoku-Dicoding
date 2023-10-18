@@ -10,7 +10,7 @@ androidx-appcompat = "1.6.1"
 androidx-constraintlayout = "2.1.4"
 
 # UI
-android-material = "1.9.0"
+android-material = "1.10.0"
 
 # Test
 junit = "4.13.2"
