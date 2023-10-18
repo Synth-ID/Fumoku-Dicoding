@@ -41,8 +41,10 @@ android {
 dependencies {
     // Base
     implementation(libs.androidx.core.ktx)
+
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.coordinatorlayout)
 
     // UI
     implementation(libs.android.material)
