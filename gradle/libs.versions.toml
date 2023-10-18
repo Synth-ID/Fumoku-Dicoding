@@ -13,6 +13,8 @@ androidx-appcompat = "1.6.1"
 # UI
 android-material = "1.10.0"
 
+glide = "4.16.0"
+
 # Test
 junit = "4.13.2"
 androidx-test-ext-junit = "1.1.5"
@@ -25,6 +27,7 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 android-material = { group = "com.google.android.material", name = "material", version.ref = "android-material" }
 
 aboutlibraries = { group = "com.mikepenz", name = "aboutlibraries", version.ref = "aboutlibraries" }
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
 
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-test-ext-junit-ktx = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "androidx-test-ext-junit" }

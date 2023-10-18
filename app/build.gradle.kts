@@ -49,6 +49,7 @@ dependencies {
     implementation(libs.android.material)
 
     implementation(libs.aboutlibraries)
+    implementation(libs.glide)
 
     // Test
     testImplementation(libs.junit)
