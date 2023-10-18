@@ -1,3 +1,9 @@
-# Default ignored files
+*.iml
+/caches/
+/libraries/
 /shelf/
+/assetWizardSettings.xml
+/misc.xml
+/modules.xml
+/navEditor.xml
 /workspace.xml
