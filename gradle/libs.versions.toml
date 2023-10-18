@@ -6,10 +6,7 @@ kotlin = "1.9.10"
 ### Libraries
 # Base
 androidx-core = "1.12.0"
-
 androidx-appcompat = "1.6.1"
-androidx-constraintlayout = "2.1.4"
-androidx-coordinatorlayout = "1.2.0"
 
 # UI
 android-material = "1.10.0"
@@ -21,10 +18,7 @@ espresso-core = "3.5.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidx-core" }
-
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidx-appcompat" }
-androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "androidx-constraintlayout" }
-androidx-coordinatorlayout = { group = "androidx.coordinatorlayout", name = "coordinatorlayout", version.ref = "androidx-coordinatorlayout" }
 
 android-material = { group = "com.google.android.material", name = "material", version.ref = "android-material" }
 
