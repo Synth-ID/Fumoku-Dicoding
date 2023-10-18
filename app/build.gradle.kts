@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+
+    alias(libs.plugins.aboutlibraries)
 }
 
 android {
@@ -45,6 +47,8 @@ dependencies {
 
     // UI
     implementation(libs.android.material)
+
+    implementation(libs.aboutlibraries)
 
     // Test
     testImplementation(libs.junit)

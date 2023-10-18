@@ -3,6 +3,8 @@
 android = "8.1.2"
 kotlin = "1.9.10"
 
+aboutlibraries = "10.9.1"
+
 ### Libraries
 # Base
 androidx-core = "1.12.0"
@@ -22,6 +24,8 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 
 android-material = { group = "com.google.android.material", name = "material", version.ref = "android-material" }
 
+aboutlibraries = { group = "com.mikepenz", name = "aboutlibraries", version.ref = "aboutlibraries" }
+
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-test-ext-junit-ktx = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "androidx-test-ext-junit" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
@@ -30,3 +34,4 @@ espresso-core = { group = "androidx.test.espresso", name = "espresso-core", vers
 android-application = { id = "com.android.application", version.ref = "android" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 
+aboutlibraries = { id = "com.mikepenz.aboutlibraries.plugin", version.ref = "aboutlibraries" }
