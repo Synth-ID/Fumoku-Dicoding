@@ -2,5 +2,10 @@
 <resources>
     <string name="app_name" translatable="false">Fumoku</string>
 
+    <string name="aboutLibraries_description_showIcon" translatable="false">true</string>
+    <string name="aboutLibraries_description_showVersionName" translatable="false">true</string>
+    <string name="aboutLibraries_description_name" translatable="false">@string/app_name</string>
+    <string name="aboutLibraries_description_text">Wiki about Fumo merch from Touhou series</string>
+
     <string name="about">About</string>
 </resources>

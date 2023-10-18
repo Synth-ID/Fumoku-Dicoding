@@ -2,6 +2,7 @@ package id.synth.fumoku
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.mikepenz.aboutlibraries.LibsBuilder
 import id.synth.fumoku.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -15,7 +16,10 @@ class MainActivity : AppCompatActivity() {
         binding.appBar.setOnMenuItemClickListener {
             when (it.itemId) {
                 R.id.about -> {
-                    // TODO: AboutActivity
+                    LibsBuilder()
+                        .withEdgeToEdge(true)
+                        .withSearchEnabled(true)
+                        .start(this)
                     true
                 }
                 else -> false
