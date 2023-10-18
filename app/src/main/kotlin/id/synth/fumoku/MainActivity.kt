@@ -11,5 +11,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.appBar.setOnMenuItemClickListener {
+            when (it.itemId) {
+                R.id.about -> {
+                    // TODO: AboutActivity
+                    true
+                }
+                else -> false
+            }
+        }
     }
 }
