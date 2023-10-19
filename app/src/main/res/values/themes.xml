@@ -27,6 +27,16 @@
         <item name="colorOutline">@color/md_theme_light_outline</item>
         <item name="colorOnSurfaceInverse">@color/md_theme_light_inverseOnSurface</item>
         <item name="colorSurfaceInverse">@color/md_theme_light_inverseSurface</item>
+        <item name="colorEye">#c00100</item>
+        <item name="colorOnEye">#ffffff</item>
+        <item name="colorEyeContainer">#ffdad4</item>
+        <item name="colorOnEyeContainer">#410000</item>
+        <item name="harmonizeEye">true</item>
+        <item name="colorSkin">#904d00</item>
+        <item name="colorOnSkin">#ffffff</item>
+        <item name="colorSkinContainer">#ffdcc3</item>
+        <item name="colorOnSkinContainer">#2e1500</item>
+        <item name="harmonizeSkin">true</item>
         <item name="colorPrimaryInverse">@color/md_theme_light_inversePrimary</item>
     </style>
 

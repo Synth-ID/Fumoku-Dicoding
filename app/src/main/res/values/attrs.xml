@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="colorEye" format="color" />
+    <attr name="colorOnEye" format="color" />
+    <attr name="colorEyeContainer" format="color" />
+    <attr name="colorOnEyeContainer" format="color" />
+    <attr name="harmonizeEye" format="boolean" />
+    <attr name="colorSkin" format="color" />
+    <attr name="colorOnSkin" format="color" />
+    <attr name="colorSkinContainer" format="color" />
+    <attr name="colorOnSkinContainer" format="color" />
+    <attr name="harmonizeSkin" format="boolean" />
+</resources>
