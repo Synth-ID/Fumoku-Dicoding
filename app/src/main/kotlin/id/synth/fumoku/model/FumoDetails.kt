@@ -11,7 +11,7 @@ data class FumoDetails(
     val id: UInt,
     @RawRes @DrawableRes
     val image: Int? = null,
-    val releaseYears: IntRange? = null,
+    val releaseYears: Set<Int>? = null,
     val rarity: Rarity? = null,
     val secondhandCost: Cost? = null,
     val priceRangeUSD: Range<BigDecimal>? = null,
@@ -27,7 +27,7 @@ data class FumoDetails(
         id: String,
         @RawRes @DrawableRes
         image: Int? = null,
-        releaseYears: IntRange? = null,
+        releaseYears: Set<Int>? = null,
         rarity: Rarity? = null,
         secondhandCost: Cost? = null,
         priceRangeUSD: Range<Double>? = null,
