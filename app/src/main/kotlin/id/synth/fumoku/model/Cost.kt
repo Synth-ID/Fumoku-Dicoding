@@ -1,6 +1,6 @@
 package id.synth.fumoku.model
 
-enum class Price {
+enum class Cost {
     LOW,
     NORMAL,
     HIGH,
