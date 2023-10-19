@@ -8,4 +8,8 @@ enum class Rarity {
     ;
 
     val rating: Int get() = ordinal + 1
+
+    override fun toString(): String {
+        return this.toPrettyString()
+    }
 }

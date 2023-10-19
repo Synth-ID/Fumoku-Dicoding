@@ -5,4 +5,9 @@ enum class FumoType {
     STRAP,
     DEKA,
     PUPPET
+    ;
+
+    override fun toString(): String {
+        return this.toPrettyString()
+    }
 }
