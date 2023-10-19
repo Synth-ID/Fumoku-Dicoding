@@ -12,4 +12,16 @@ data class FumoDetails(
     val releaseYears: Range<Year>?,
     val rarity: Rarity?,
     val price: Price?,
-)
+) {
+    @Throws(
+        NumberFormatException::class,
+    )
+    constructor(
+        id: String,
+        @RawRes @DrawableRes
+        image: Int?,
+        releaseYears: Range<Year>?,
+        rarity: Rarity?,
+        price: Price?,
+    ) : this(id.toInt(), image, releaseYears, rarity, price)
+}
