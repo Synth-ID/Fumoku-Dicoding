@@ -33,6 +33,9 @@ android {
         }
     }
     compileOptions {
+        // Flag to enable support for the new language APIs
+        isCoreLibraryDesugaringEnabled = true
+
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
@@ -42,6 +45,9 @@ android {
 }
 
 dependencies {
+    // Desugar
+    coreLibraryDesugaring(libs.android.desugar)
+
     // Base
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.core.splashscreen)
