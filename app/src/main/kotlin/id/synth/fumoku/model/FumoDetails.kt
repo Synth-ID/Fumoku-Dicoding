@@ -6,6 +6,7 @@ import androidx.annotation.RawRes
 import java.time.Year
 
 data class FumoDetails(
+    val id: Int,
     @RawRes @DrawableRes
     val image: Int?,
     val releaseYears: Range<Year>?,

@@ -9,4 +9,15 @@ data class Fumo(
     val character: String,
     val type: FumoType,
     val name: String,
-) : Parcelable
+) : Parcelable {
+    @Throws(
+        NumberFormatException::class,
+        IllegalArgumentException::class,
+    )
+    constructor(
+        id: String,
+        character: String,
+        type: String,
+        name: String,
+    ) : this(id.toInt(), character, FumoType.valueOf(type.uppercase()), name)
+}
