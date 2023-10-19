@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
 
+        // App bar logic
         binding.appBar.setOnMenuItemClickListener {
             when (it.itemId) {
                 R.id.about -> {
@@ -33,6 +34,7 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
+        // Set account avatar from image
         Glide.with(this)
             .load(R.drawable.account)
             .circleCrop()
