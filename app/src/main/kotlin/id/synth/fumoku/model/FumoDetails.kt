@@ -1,7 +1,9 @@
 package id.synth.fumoku.model
 
+import android.util.Range
 import androidx.annotation.DrawableRes
 import androidx.annotation.RawRes
+import java.math.BigDecimal
 import java.net.MalformedURLException
 import java.net.URL
 
@@ -12,7 +14,7 @@ data class FumoDetails(
     val releaseYears: IntRange? = null,
     val rarity: Rarity? = null,
     val secondhandCost: Cost? = null,
-    val priceRangeUSD: ULongRange? = null,
+    val priceRangeUSD: Range<BigDecimal>? = null,
     val link: URL? = null,
 ) {
     @Throws(
@@ -26,7 +28,15 @@ data class FumoDetails(
         releaseYears: IntRange? = null,
         rarity: Rarity? = null,
         secondhandCost: Cost? = null,
-        priceRangeUSD: ULongRange? = null,
+        priceRangeUSD: Range<Double>? = null,
         link: String? = null,
-    ) : this(id.toInt(), image, releaseYears, rarity, secondhandCost, priceRangeUSD, URL(link))
+    ) : this(
+        id.toInt(),
+        image,
+        releaseYears,
+        rarity,
+        secondhandCost,
+        priceRangeUSD?.run { Range(lower.toBigDecimal(), upper.toBigDecimal()) },
+        URL(link)
+    )
 }
