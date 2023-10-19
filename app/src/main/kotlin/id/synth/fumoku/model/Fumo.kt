@@ -10,6 +10,8 @@ data class Fumo(
     val type: FumoType,
     val name: String,
 ) : Parcelable {
+    val idPadded: String get() = "%03d".format(id)
+
     @Throws(
         NumberFormatException::class,
     )

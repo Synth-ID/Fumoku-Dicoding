@@ -17,6 +17,8 @@ data class FumoDetails(
     val priceRangeUSD: Range<BigDecimal>? = null,
     val link: URL? = null,
 ) {
+    val idPadded: String get() = "%03d".format(id)
+
     @Throws(
         NumberFormatException::class,
         MalformedURLException::class,
