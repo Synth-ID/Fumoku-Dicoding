@@ -5,10 +5,10 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class Fumo(
-    val id: UInt,
     val character: String,
     val type: FumoType,
     val name: String,
+    val id: UInt,
 ) : Parcelable {
     val idPadded: String get() = "%03d".format(id)
 
@@ -16,9 +16,9 @@ data class Fumo(
         NumberFormatException::class,
     )
     constructor(
-        id: String,
         character: String,
         type: FumoType,
         name: String,
-    ) : this(id.toUInt(), character, type, name)
+        id: String,
+    ) : this(character, type, name, id.toUInt())
 }
