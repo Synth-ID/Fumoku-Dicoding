@@ -12,12 +12,11 @@ data class Fumo(
 ) : Parcelable {
     @Throws(
         NumberFormatException::class,
-        IllegalArgumentException::class,
     )
     constructor(
         id: String,
         character: String,
-        type: String,
+        type: FumoType,
         name: String,
-    ) : this(id.toInt(), character, FumoType.valueOf(type.uppercase()), name)
+    ) : this(id.toInt(), character, type, name)
 }
