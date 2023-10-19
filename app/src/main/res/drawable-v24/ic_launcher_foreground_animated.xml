@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:drawable="@drawable/ic_launcher_foreground">
+    <target android:name="icon">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="translateY"
+                    android:duration="200"
+                    android:valueFrom="10.8"
+                    android:valueTo="20.2"
+                    android:valueType="floatType"
+                    android:interpolator="@android:interpolator/linear_out_slow_in"/>
+                <objectAnimator
+                    android:propertyName="translateY"
+                    android:startOffset="200"
+                    android:duration="300"
+                    android:valueFrom="20.2"
+                    android:valueTo="5.6"
+                    android:valueType="floatType"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+                <objectAnimator
+                    android:propertyName="translateY"
+                    android:startOffset="500"
+                    android:duration="200"
+                    android:valueFrom="5.6"
+                    android:valueTo="10.8"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/accelerate_decelerate_interpolator"/>
+                <objectAnimator
+                    android:propertyName="rotation"
+                    android:duration="200"
+                    android:valueFrom="0"
+                    android:valueTo="-2"
+                    android:valueType="floatType"
+                    android:interpolator="@android:interpolator/linear_out_slow_in"/>
+                <objectAnimator
+                    android:propertyName="rotation"
+                    android:startOffset="200"
+                    android:duration="300"
+                    android:valueFrom="-2"
+                    android:valueTo="3"
+                    android:valueType="floatType"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+                <objectAnimator
+                    android:propertyName="rotation"
+                    android:startOffset="500"
+                    android:duration="200"
+                    android:valueFrom="3"
+                    android:valueTo="0"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/accelerate_decelerate_interpolator"/>
+                <objectAnimator
+                    android:propertyName="translateX"
+                    android:duration="200"
+                    android:valueFrom="10.8"
+                    android:valueTo="9.2"
+                    android:valueType="floatType"
+                    android:interpolator="@android:interpolator/linear_out_slow_in"/>
+                <objectAnimator
+                    android:propertyName="translateX"
+                    android:startOffset="200"
+                    android:duration="300"
+                    android:valueFrom="9.2"
+                    android:valueTo="13.6"
+                    android:valueType="floatType"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+                <objectAnimator
+                    android:propertyName="translateX"
+                    android:startOffset="500"
+                    android:duration="200"
+                    android:valueFrom="13.6"
+                    android:valueTo="10.8"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/accelerate_decelerate_interpolator"/>
+            </set>
+        </aapt:attr>
+    </target>
+    <target android:name="mouth">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="pathData"
+                    android:startOffset="150"
+                    android:duration="550"
+                    android:valueFrom="M 48.891 69.348 L 53.203 62.664 Q 53.594 62.664 53.984 62.664 Q 54.375 62.664 54.766 62.664 L 59.109 69.35 L 59.109 69.711 Q 57.961 69.711 56.813 69.711 L 54 65.477 L 51.156 69.711 Q 50.023 69.711 48.891 69.711 L 48.891 69.348"
+                    android:valueTo="M 48.61 63.26 L 50.53 63.26 Q 52.31 64.42 53.95 66.21 Q 55.92 64.24 57.43 63.26 L 59.41 63.26 L 59.41 63.68 Q 56.21 66.88 55.41 68.38 L 53.97 68.38 L 52.53 68.38 Q 51.59 66.79 48.59 63.68 L 48.61 63.26"
+                    android:valueType="pathType"
+                    android:interpolator="@android:anim/anticipate_overshoot_interpolator"/>
+                <objectAnimator
+                    android:propertyName="pathData"
+                    android:duration="150"
+                    android:valueFrom="M 48.61 63.26 L 50.53 63.26 Q 52.31 64.42 53.95 66.21 Q 55.92 64.24 57.43 63.26 L 59.41 63.26 L 59.41 63.68 Q 56.21 66.88 55.41 68.38 L 53.97 68.38 L 52.53 68.38 Q 51.59 66.79 48.59 63.68 L 48.61 63.26"
+                    android:valueTo="M 48.891 69.348 L 53.203 62.664 Q 53.594 62.664 53.984 62.664 Q 54.375 62.664 54.766 62.664 L 59.109 69.35 L 59.109 69.711 Q 57.961 69.711 56.813 69.711 L 54 65.477 L 51.156 69.711 Q 50.023 69.711 48.891 69.711 L 48.891 69.348"
+                    android:valueType="pathType"
+                    android:interpolator="@android:anim/accelerate_decelerate_interpolator"/>
+            </set>
+        </aapt:attr>
+    </target>
+</animated-vector>
