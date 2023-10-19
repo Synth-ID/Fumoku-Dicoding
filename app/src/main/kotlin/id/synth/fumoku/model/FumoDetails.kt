@@ -1,4 +1,4 @@
-package id.synth.fumoku.data
+package id.synth.fumoku.model
 
 import android.util.Range
 import androidx.annotation.DrawableRes

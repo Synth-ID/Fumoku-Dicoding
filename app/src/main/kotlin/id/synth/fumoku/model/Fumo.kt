@@ -1,4 +1,4 @@
-package id.synth.fumoku.data
+package id.synth.fumoku.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
