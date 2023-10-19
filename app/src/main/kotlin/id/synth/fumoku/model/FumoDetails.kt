@@ -8,7 +8,7 @@ import java.net.MalformedURLException
 import java.net.URL
 
 data class FumoDetails(
-    val id: Int,
+    val id: UInt,
     @RawRes @DrawableRes
     val image: Int? = null,
     val releaseYears: IntRange? = null,
@@ -33,7 +33,7 @@ data class FumoDetails(
         priceRangeUSD: Range<Double>? = null,
         link: String? = null,
     ) : this(
-        id.toInt(),
+        id.toUInt(),
         image,
         releaseYears,
         rarity,

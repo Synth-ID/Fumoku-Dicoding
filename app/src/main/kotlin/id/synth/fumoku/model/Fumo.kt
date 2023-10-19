@@ -5,7 +5,7 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class Fumo(
-    val id: Int,
+    val id: UInt,
     val character: String,
     val type: FumoType,
     val name: String,
@@ -20,5 +20,5 @@ data class Fumo(
         character: String,
         type: FumoType,
         name: String,
-    ) : this(id.toInt(), character, type, name)
+    ) : this(id.toUInt(), character, type, name)
 }
