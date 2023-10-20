@@ -4,8 +4,8 @@
 
     <item
         android:id="@+id/about"
-        android:icon="@drawable/account_circle"
         android:title="@string/about"
+        app:actionLayout="@layout/action_avatar"
         app:showAsAction="always" />
 
 </menu>
