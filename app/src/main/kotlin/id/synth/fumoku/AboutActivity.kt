@@ -2,10 +2,22 @@ package id.synth.fumoku
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import id.synth.fumoku.databinding.ActivityAboutBinding
 
 class AboutActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityAboutBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        installSplashScreen()
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_about)
+        binding = ActivityAboutBinding.inflate(layoutInflater)
+
+        // App bar logic
+        binding.appBar.setNavigationOnClickListener {
+            finish()
+        }
+
+        setContentView(binding.root)
     }
 }
