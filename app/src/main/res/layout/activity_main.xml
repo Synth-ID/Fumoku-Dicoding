@@ -9,7 +9,9 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        
+
+        <!-- TODO: Replace with search bar -->
+
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/app_bar"
             android:layout_width="match_parent"

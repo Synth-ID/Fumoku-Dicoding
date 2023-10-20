@@ -56,5 +56,8 @@ class MainActivity : AppCompatActivity() {
                 }
 
             })
+
+        // TODO: Implement RecyclerView
+//        binding.recycler
     }
 }
