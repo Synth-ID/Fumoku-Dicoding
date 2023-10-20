@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
 
         // Set account avatar from image
         Glide.with(this)
-            .load(R.drawable.account)
+            .load(R.drawable.avatar)
             .circleCrop()
             .into(object : CustomTarget<Drawable>() {
                 private val about: MenuItem = binding.searchBar.menu.findItem(R.id.about)
