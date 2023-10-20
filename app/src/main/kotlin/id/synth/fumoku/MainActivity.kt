@@ -1,5 +1,6 @@
 package id.synth.fumoku
 
+import android.content.Intent
 import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
 
         // App bar logic
-        binding.appBar.setOnMenuItemClickListener {
+        binding.searchBar.setOnMenuItemClickListener {
             when (it.itemId) {
                 R.id.about -> {
                     // TODO: Replace with fragment
@@ -29,7 +30,8 @@ class MainActivity : AppCompatActivity() {
 //                        .withEdgeToEdge(true)
 //                        .withSearchEnabled(true)
 //                        .activity(this)
-                    false
+                    startActivity(Intent(this, AboutActivity::class.java))
+                    true
                 }
                 else -> false
             }
@@ -42,7 +44,7 @@ class MainActivity : AppCompatActivity() {
             .load(R.drawable.account)
             .circleCrop()
             .into(object : CustomTarget<Drawable>() {
-                private val about: MenuItem = binding.appBar.menu.findItem(R.id.about)
+                private val about: MenuItem = binding.searchBar.menu.findItem(R.id.about)
 
                 override fun onResourceReady(icon: Drawable, transition: Transition<in Drawable>?) {
                     about.icon = icon
