@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.Fumoku" parent="Theme.Material3.Light.NoActionBar">
+    <style name="NightAdjusted.Theme.Fumoku" parent="Theme.Material3.Light.NoActionBar">
         <item name="colorPrimary">@color/md_theme_light_primary</item>
         <item name="colorOnPrimary">@color/md_theme_light_onPrimary</item>
         <item name="colorPrimaryContainer">@color/md_theme_light_primaryContainer</item>
@@ -40,5 +40,18 @@
         <item name="colorPrimaryInverse">@color/md_theme_light_inversePrimary</item>
     </style>
 
-    <style name="Theme.Fumoku" parent="Base.Theme.Fumoku" />
+    <!-- Final theme. -->
+    <style name="Theme.Fumoku" parent="NightAdjusted.Theme.Fumoku" />
+
+    <style name="NightAdjusted.Theme.Splash" parent="Theme.SplashScreen">
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
+    </style>
+
+    <style name="Theme.Fumoku.Splash" parent="NightAdjusted.Theme.Splash">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground_animated</item>
+        <item name="windowSplashScreenAnimationDuration">700</item>
+        <item name="windowSplashScreenBackground">@color/skin</item>
+        <item name="postSplashScreenTheme">@style/Theme.Fumoku</item>
+    </style>
 </resources>

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.content.res.AppCompatResources
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        installSplashScreen()
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
 
@@ -22,11 +24,12 @@ class MainActivity : AppCompatActivity() {
         binding.appBar.setOnMenuItemClickListener {
             when (it.itemId) {
                 R.id.about -> {
-                    LibsBuilder()
-                        .withEdgeToEdge(true)
-                        .withSearchEnabled(true)
-                        .start(this)
-                    true
+                    // TODO: Replace with fragment
+//                    LibsBuilder()
+//                        .withEdgeToEdge(true)
+//                        .withSearchEnabled(true)
+//                        .activity(this)
+                    false
                 }
                 else -> false
             }

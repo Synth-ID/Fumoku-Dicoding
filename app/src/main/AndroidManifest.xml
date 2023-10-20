@@ -10,8 +10,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Fumoku"
-        tools:targetApi="31">
+        android:theme="@style/Theme.Fumoku.Splash"
+        tools:targetApi="S">
         <activity
             android:name=".AboutActivity"
             android:exported="false" />
