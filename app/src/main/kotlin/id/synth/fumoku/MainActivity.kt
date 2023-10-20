@@ -3,6 +3,7 @@ package id.synth.fumoku
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.widget.TooltipCompat
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.bumptech.glide.Glide
 import com.google.android.material.imageview.ShapeableImageView
@@ -20,6 +21,12 @@ class MainActivity : AppCompatActivity() {
         val about = binding.searchBar.menu.findItem(R.id.about)
         val avatar = about.actionView as ShapeableImageView
 
+        fun startActivityAbout() {
+            startActivity(
+                Intent(this, AboutActivity::class.java)
+            )
+        }
+
         // App bar logic
         binding.searchBar.setOnMenuItemClickListener {
             when (it.itemId) {
@@ -29,11 +36,16 @@ class MainActivity : AppCompatActivity() {
 //                        .withEdgeToEdge(true)
 //                        .withSearchEnabled(true)
 //                        .activity(this)
-                    startActivity(Intent(this, AboutActivity::class.java))
+                    startActivityAbout()
                     true
                 }
                 else -> false
             }
+        }
+
+        TooltipCompat.setTooltipText(avatar, getString(R.string.about))
+        avatar.setOnClickListener {
+            startActivityAbout()
         }
 
         setContentView(binding.root)
