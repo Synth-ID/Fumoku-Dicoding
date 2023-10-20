@@ -3,6 +3,7 @@ package id.synth.fumoku
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import com.bumptech.glide.Glide
 import id.synth.fumoku.databinding.ActivityAboutBinding
 
 class AboutActivity : AppCompatActivity() {
@@ -19,5 +20,11 @@ class AboutActivity : AppCompatActivity() {
         }
 
         setContentView(binding.root)
+
+        // Set account avatar from image
+        Glide.with(this)
+            .load(R.drawable.avatar)
+            .circleCrop()
+            .into(binding.avatar)
     }
 }
