@@ -9,7 +9,6 @@ import androidx.appcompat.widget.TooltipCompat
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.bumptech.glide.Glide
 import com.google.android.material.imageview.ShapeableImageView
-import com.google.android.material.transition.platform.MaterialContainerTransformSharedElementCallback
 import com.google.android.material.transition.platform.MaterialSharedAxis
 import com.mikepenz.aboutlibraries.LibsBuilder
 import id.synth.fumoku.databinding.ActivityMainBinding
@@ -40,9 +39,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(
                 Intent(this, AboutActivity::class.java),
                 ActivityOptions.makeSceneTransitionAnimation(
-                    this,
-                    avatar,
-                    "avatar"
+                    this, avatar, "avatar"
                 ).toBundle(),
             )
         }
@@ -59,6 +56,7 @@ class MainActivity : AppCompatActivity() {
                     startActivityAbout()
                     true
                 }
+
                 else -> false
             }
         }
