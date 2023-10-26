@@ -1,12 +1,16 @@
 package id.synth.fumoku
 
+import android.app.ActivityOptions
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Window
 import androidx.appcompat.widget.TooltipCompat
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.bumptech.glide.Glide
 import com.google.android.material.imageview.ShapeableImageView
+import com.google.android.material.transition.platform.MaterialContainerTransformSharedElementCallback
+import com.google.android.material.transition.platform.MaterialSharedAxis
 import com.mikepenz.aboutlibraries.LibsBuilder
 import id.synth.fumoku.databinding.ActivityMainBinding
 
@@ -21,9 +25,25 @@ class MainActivity : AppCompatActivity() {
         val about = binding.searchBar.menu.findItem(R.id.about)
         val avatar = about.actionView as ShapeableImageView
 
+        // Set up transition
+        window.requestFeature(Window.FEATURE_ACTIVITY_TRANSITIONS)
+        window.exitTransition = MaterialSharedAxis(MaterialSharedAxis.Z, true).apply {
+            addTarget(binding.root)
+        }
+        window.reenterTransition = MaterialSharedAxis(MaterialSharedAxis.Z, false).apply {
+            addTarget(binding.root)
+        }
+
+        avatar.transitionName = "avatar"
+
         fun startActivityAbout() {
             startActivity(
-                Intent(this, AboutActivity::class.java)
+                Intent(this, AboutActivity::class.java),
+                ActivityOptions.makeSceneTransitionAnimation(
+                    this,
+                    avatar,
+                    "avatar"
+                ).toBundle(),
             )
         }
 
