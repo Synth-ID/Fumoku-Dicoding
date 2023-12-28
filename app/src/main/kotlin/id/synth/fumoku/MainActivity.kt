@@ -7,11 +7,14 @@ import android.os.Bundle
 import android.view.Window
 import androidx.appcompat.widget.TooltipCompat
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.google.android.material.imageview.ShapeableImageView
 import com.google.android.material.transition.platform.MaterialSharedAxis
 import com.mikepenz.aboutlibraries.LibsBuilder
+import id.synth.fumoku.data.FumoStore
 import id.synth.fumoku.databinding.ActivityMainBinding
+import id.synth.fumoku.feature.home.FumoAdapter
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -73,7 +76,9 @@ class MainActivity : AppCompatActivity() {
             .load(R.drawable.avatar)
             .into(avatar)
 
-        // TODO: Implement RecyclerView
-//        binding.recycler
+        binding.recycler.layoutManager = LinearLayoutManager(this)
+        binding.recycler.adapter = FumoAdapter().apply {
+            submit(FumoStore.getAll().map { it.first })
+        }
     }
 }
