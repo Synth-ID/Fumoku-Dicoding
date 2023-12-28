@@ -30,7 +30,7 @@ object FumoStore {
                             type,
                             "Version 1",
                             "001",
-                            img = null, // TODO
+                            img = "https://fumo.website/img/001.jpg",
                             releaseDates = setOf(
                                 2008,
                                 2009,
@@ -47,7 +47,7 @@ object FumoStore {
                             type,
                             "Nendroid Plus",
                             "029",
-                            img = null, // TODO
+                            img = "https://fumo.website/img/029.jpg",
                             releaseDates = setOf(
                                 2010,
                             ),
@@ -60,7 +60,7 @@ object FumoStore {
                             type,
                             "Kourindou Version",
                             "345",
-                            img = null, // TODO
+                            img = "https://fumo.website/img/345.jpg",
                             releaseDates = setOf(
                                 2015,
                                 2016,
@@ -77,7 +77,7 @@ object FumoStore {
                             type,
                             "Version 1.5",
                             "897",
-                            img = null, // TODO
+                            img = "https://fumo.website/img/897.jpg",
                             releaseDates = setOf(
                                 2022,
                             ),
@@ -93,7 +93,7 @@ object FumoStore {
                             type,
                             name = "Nendroid Plus",
                             id = "122",
-                            img = null, // TODO
+                            img = "https://fumo.website/img/122.jpg",
                             releaseDates = setOf(
                                 2011,
                             ),
@@ -105,7 +105,7 @@ object FumoStore {
                             type,
                             name = "Kourindou Version",
                             id = "452",
-                            img = null, // TODO
+                            img = "https://fumo.website/img/452.jpg",
                             releaseDates = setOf(
                                 2016,
                             ),
@@ -118,7 +118,7 @@ object FumoStore {
                             type,
                             name = "Plush Strap",
                             id = "745",
-                            img = null, // TODO
+                            img = "https://fumo.website/img/745.jpg",
                             releaseDates = setOf(
                                 2020,
                             ),
@@ -135,7 +135,7 @@ object FumoStore {
                             type,
                             name = "Version 1",
                             id = "009",
-                            img = null, // TODO
+                            img = "https://fumo.website/img/009.jpg",
                             releaseDates = setOf(
                                 2009,
                                 2010,
@@ -151,7 +151,7 @@ object FumoStore {
                             type,
                             name = "Kourindou Version",
                             id = "739",
-                            img = null, // TODO
+                            img = "https://fumo.website/img/739.jpg",
                             releaseDates = setOf(
                                 2020,
                             ),
@@ -168,7 +168,7 @@ object FumoStore {
                             type,
                             name = "Puppet",
                             id = "021",
-                            img = null, // TODO
+                            img = "https://fumo.website/img/021.jpg",
                             releaseDates = setOf(
                                 2009,
                             ),
@@ -188,7 +188,7 @@ object FumoStore {
                         type,
                         name = "Version 1",
                         id = "002",
-                        img = null, // TODO
+                        img = "https://fumo.website/img/002.jpg",
                         releaseDates = setOf(
                             2008, 2009, 2010, 2011, 2012
                         ),
@@ -206,7 +206,7 @@ object FumoStore {
                         type,
                         name = "Version 1",
                         id = "014",
-                        img = null, // TODO
+                        img = "https://fumo.website/img/014.jpg",
                         releaseDates = setOf(
                             2009, 2010, 2011, 2013
                         ),
