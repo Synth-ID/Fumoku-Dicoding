@@ -31,16 +31,16 @@ class FumoAdapter() : RecyclerView.Adapter<FumoAdapter.ViewHolder>() {
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val fumo = asyncListDiffer.currentList[position]
 
-        with(holder) {
-            binding.id.text = fumo.idPadded
-            binding.character.text = fumo.character
-            binding.name.text = fumo.name
+        with(holder.binding) {
+            id.text = fumo.idPadded
+            character.text = fumo.character
+            name.text = fumo.name
 
-            binding.type.text = fumo.type.toString()
+            type.text = fumo.type.toString()
 
-            Glide.with(binding.root)
+            Glide.with(root)
                 .load(fumo.image)
-                .into(binding.image)
+                .into(image)
         }
     }
 

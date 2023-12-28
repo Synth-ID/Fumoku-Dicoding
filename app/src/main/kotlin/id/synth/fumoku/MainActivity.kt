@@ -8,6 +8,7 @@ import android.view.Window
 import androidx.appcompat.widget.TooltipCompat
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.bumptech.glide.Glide
 import com.google.android.material.imageview.ShapeableImageView
 import com.google.android.material.transition.platform.MaterialSharedAxis
@@ -76,9 +77,14 @@ class MainActivity : AppCompatActivity() {
             .load(R.drawable.avatar)
             .into(avatar)
 
-        binding.recycler.layoutManager = LinearLayoutManager(this)
-        binding.recycler.adapter = FumoAdapter().apply {
-            submit(FumoStore.getAll().map { it.first })
+        with(binding.recycler) {
+            layoutManager = StaggeredGridLayoutManager(
+                2,
+                StaggeredGridLayoutManager.VERTICAL,
+            )
+            adapter = FumoAdapter().apply {
+                submit(FumoStore.getAll().map { it.first })
+            }
         }
     }
 }
