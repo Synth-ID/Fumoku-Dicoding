@@ -1,8 +1,6 @@
 package id.synth.fumoku.model
 
-import android.annotation.SuppressLint
 import android.util.Range
-import androidx.recyclerview.widget.DiffUtil
 import java.math.BigDecimal
 import java.net.MalformedURLException
 import java.net.URL
@@ -15,8 +13,6 @@ data class FumoDetails(
     val priceRangeUSD: Range<BigDecimal>? = null,
     val link: URL? = null,
 ) {
-    val idPadded: String get() = "%03d".format(id)
-
     @Throws(
         NumberFormatException::class,
         MalformedURLException::class,
@@ -36,18 +32,4 @@ data class FumoDetails(
         priceRangeUSD?.run { Range(lower.toBigDecimal(), upper.toBigDecimal()) },
         if (link == null) null else URL(link)
     )
-
-    class DiffCallback : DiffUtil.ItemCallback<FumoDetails>() {
-        override fun areItemsTheSame(oldItem: FumoDetails, newItem: FumoDetails) =
-            oldItem.id == newItem.id
-
-        @SuppressLint("DiffUtilEquals")
-        override fun areContentsTheSame(oldItem: FumoDetails, newItem: FumoDetails) =
-            oldItem.releaseYears == newItem.releaseYears
-                    && oldItem.rarity == newItem.rarity
-                    && oldItem.secondhandCost == newItem.secondhandCost
-                    && oldItem.priceRangeUSD == newItem.priceRangeUSD
-                    && oldItem.link == newItem.link
-
-    }
 }

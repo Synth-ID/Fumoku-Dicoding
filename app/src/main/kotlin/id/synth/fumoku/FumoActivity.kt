@@ -28,7 +28,6 @@ class FumoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityFumoBinding.inflate(layoutInflater)
 
-        val layout = binding.layout
         val image = binding.image
 
         // Set up transition
