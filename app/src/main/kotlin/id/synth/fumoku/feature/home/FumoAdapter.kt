@@ -2,6 +2,7 @@ package id.synth.fumoku.feature.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -41,6 +42,15 @@ class FumoAdapter() : RecyclerView.Adapter<FumoAdapter.ViewHolder>() {
             Glide.with(root)
                 .load(fumo.image)
                 .into(image)
+
+            // On click
+            root.setOnClickListener {
+                Toast.makeText(root.context, fumo.idPadded, Toast.LENGTH_SHORT).show()
+            }
+
+            type.setOnClickListener {
+                Toast.makeText(root.context, fumo.type.toString(), Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
