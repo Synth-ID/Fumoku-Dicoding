@@ -11,8 +11,6 @@ import java.net.URL
 
 data class FumoDetails(
     val id: UInt,
-    @RawRes @DrawableRes
-    val image: Int? = null,
     val releaseYears: Set<Int>? = null,
     val rarity: Rarity? = null,
     val secondhandCost: Cost? = null,
@@ -27,8 +25,6 @@ data class FumoDetails(
     )
     constructor(
         id: String,
-        @RawRes @DrawableRes
-        image: Int? = null,
         releaseYears: Set<Int>? = null,
         rarity: Rarity? = null,
         secondhandCost: Cost? = null,
@@ -36,12 +32,11 @@ data class FumoDetails(
         link: String? = null,
     ) : this(
         id.toUInt(),
-        image,
         releaseYears,
         rarity,
         secondhandCost,
         priceRangeUSD?.run { Range(lower.toBigDecimal(), upper.toBigDecimal()) },
-        URL(link)
+        if (link == null) null else URL(link)
     )
 
     class DiffCallback : DiffUtil.ItemCallback<FumoDetails>() {
@@ -50,12 +45,11 @@ data class FumoDetails(
 
         @SuppressLint("DiffUtilEquals")
         override fun areContentsTheSame(oldItem: FumoDetails, newItem: FumoDetails) =
-            oldItem.image == newItem.image
-                    && oldItem.releaseYears == newItem.releaseYears
+            oldItem.releaseYears == newItem.releaseYears
                     && oldItem.rarity == newItem.rarity
                     && oldItem.secondhandCost == newItem.secondhandCost
                     && oldItem.priceRangeUSD == newItem.priceRangeUSD
-                    && oldItem.link?.sameFile(newItem.link) ?: false
+                    && oldItem.link == newItem.link
 
     }
 }

@@ -3,6 +3,7 @@ package id.synth.fumoku.model
 import android.os.Parcelable
 import androidx.recyclerview.widget.DiffUtil
 import kotlinx.parcelize.Parcelize
+import java.net.URL
 
 @Parcelize
 data class Fumo(
@@ -10,6 +11,7 @@ data class Fumo(
     val type: FumoType,
     val name: String,
     val id: UInt,
+    val image: URL?,
 ) : Parcelable {
     val idPadded: String get() = "%03d".format(id)
 
@@ -21,9 +23,16 @@ data class Fumo(
         type: FumoType,
         name: String,
         id: String,
-    ) : this(character, type, name, id.toUInt())
+        image: String? = null,
+    ) : this(
+        character,
+        type,
+        name,
+        id.toUInt(),
+        if (image == null) null else URL(image),
+    )
 
-    class DiffCallback : DiffUtil.ItemCallback<Fumo>() {
+    class DiffCallback(private val imageDiff: Boolean = false) : DiffUtil.ItemCallback<Fumo>() {
         override fun areItemsTheSame(oldItem: Fumo, newItem: Fumo) =
             oldItem.id == newItem.id
 
@@ -31,6 +40,6 @@ data class Fumo(
             oldItem.character == newItem.character
                     && oldItem.type == newItem.type
                     && oldItem.name == newItem.name
-
+                    && (!imageDiff || oldItem.image == newItem.image)
     }
 }

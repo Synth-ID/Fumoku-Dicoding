@@ -227,7 +227,7 @@ object FumoStore {
         type: FumoType,
         name: String,
         id: String,
-        @RawRes @DrawableRes img: Int? = null,
+        img: String? = null,
         releaseDates: Set<Int>? = null,
         rarity: Rarity? = null,
         secondhandCost: Cost? = null,
@@ -235,10 +235,15 @@ object FumoStore {
         link: String? = null
     ): FumoPair {
         return Pair(
-            Fumo(character, type, name, id),
+            Fumo(
+                character,
+                type,
+                name,
+                id,
+                img,
+            ),
             FumoDetails(
                 id,
-                image = img,
                 releaseYears = releaseDates,
                 rarity,
                 secondhandCost,
