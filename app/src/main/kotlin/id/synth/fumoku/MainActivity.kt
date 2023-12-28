@@ -82,13 +82,15 @@ class MainActivity : AppCompatActivity() {
             )
         }
 
+        val data = FumoStore.getAll().map { it.first }.sortedBy { it.id }
+
         with(binding.recycler) {
             layoutManager = StaggeredGridLayoutManager(
                 2,
                 StaggeredGridLayoutManager.VERTICAL,
             )
             adapter = FumoAdapter().apply {
-                submit(FumoStore.getAll().map { it.first })
+                submit(data)
             }.apply {
                 onClickListener = ::startActivityFumo
             }
