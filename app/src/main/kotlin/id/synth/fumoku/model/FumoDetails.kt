@@ -2,8 +2,6 @@ package id.synth.fumoku.model
 
 import android.annotation.SuppressLint
 import android.util.Range
-import androidx.annotation.DrawableRes
-import androidx.annotation.RawRes
 import androidx.recyclerview.widget.DiffUtil
 import java.math.BigDecimal
 import java.net.MalformedURLException

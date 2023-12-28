@@ -2,23 +2,17 @@ package id.synth.fumoku.feature.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import id.synth.fumoku.R
 import id.synth.fumoku.databinding.ItemFumoBinding
 import id.synth.fumoku.model.Fumo
 
-class FumoAdapter() : RecyclerView.Adapter<FumoAdapter.ViewHolder>() {
+class FumoAdapter : RecyclerView.Adapter<FumoAdapter.ViewHolder>() {
     class ViewHolder(val binding: ItemFumoBinding) : RecyclerView.ViewHolder(binding.root)
 
     private val asyncListDiffer = AsyncListDiffer(this, Fumo.DiffCallback())
     var onClickListener: ((ViewHolder, Fumo) -> Unit)? = null
-        get() = field
-        set(value) {
-            field = value
-        }
 
     fun submit(newList: List<Fumo>) {
         asyncListDiffer.submitList(newList)

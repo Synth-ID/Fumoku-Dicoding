@@ -1,18 +1,11 @@
 package id.synth.fumoku.data
 
 import android.util.Range
-import androidx.annotation.DrawableRes
-import androidx.annotation.RawRes
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import id.synth.fumoku.model.Cost
+import id.synth.fumoku.model.*
 import id.synth.fumoku.model.Cost.*
-import id.synth.fumoku.model.Fumo
-import id.synth.fumoku.model.FumoDetails
-import id.synth.fumoku.model.FumoPair
-import id.synth.fumoku.model.FumoType
 import id.synth.fumoku.model.FumoType.*
-import id.synth.fumoku.model.Rarity
 import id.synth.fumoku.model.Rarity.*
 
 // Data from https://github.com/Ununoctium117/fumosite/blob/master/fumo_data.json
