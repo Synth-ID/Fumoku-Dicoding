@@ -30,12 +30,6 @@ class MainActivity : AppCompatActivity() {
 
         // Set up transition
         window.requestFeature(Window.FEATURE_ACTIVITY_TRANSITIONS)
-        window.exitTransition = MaterialSharedAxis(MaterialSharedAxis.Z, true).apply {
-            addTarget(binding.root)
-        }
-        window.reenterTransition = MaterialSharedAxis(MaterialSharedAxis.Z, false).apply {
-            addTarget(binding.root)
-        }
 
         avatar.transitionName = "avatar"
 

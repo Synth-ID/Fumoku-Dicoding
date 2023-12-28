@@ -24,10 +24,6 @@ class AboutActivity : AppCompatActivity() {
 
         // Set up transition
         window.requestFeature(Window.FEATURE_ACTIVITY_TRANSITIONS)
-        window.enterTransition = MaterialSharedAxis(MaterialSharedAxis.Z, true)
-        window.allowEnterTransitionOverlap = true
-        window.returnTransition = MaterialSharedAxis(MaterialSharedAxis.Z, false)
-        window.allowReturnTransitionOverlap = true
 
         avatar.transitionName = "avatar"
 
