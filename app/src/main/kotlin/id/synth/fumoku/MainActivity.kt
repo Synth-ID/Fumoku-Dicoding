@@ -16,6 +16,8 @@ import com.mikepenz.aboutlibraries.LibsBuilder
 import id.synth.fumoku.data.FumoStore
 import id.synth.fumoku.databinding.ActivityMainBinding
 import id.synth.fumoku.feature.home.FumoAdapter
+import id.synth.fumoku.model.Fumo
+import android.util.Pair
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -64,12 +66,21 @@ class MainActivity : AppCompatActivity() {
             startActivityAbout()
         }
 
-        setContentView(binding.root)
-
         // Set account avatar from image
         Glide.with(this)
             .load(R.drawable.avatar)
             .into(avatar)
+
+        fun startActivityFumo(holder: FumoAdapter.ViewHolder, fumo: Fumo) {
+            startActivity(
+                Intent(this, FumoActivity::class.java).apply {
+                    putExtra(FumoActivity.DATA, fumo)
+                },
+                ActivityOptions.makeSceneTransitionAnimation(
+                    this, holder.binding.image, "image",
+                ).toBundle(),
+            )
+        }
 
         with(binding.recycler) {
             layoutManager = StaggeredGridLayoutManager(
@@ -78,7 +89,11 @@ class MainActivity : AppCompatActivity() {
             )
             adapter = FumoAdapter().apply {
                 submit(FumoStore.getAll().map { it.first })
+            }.apply {
+                onClickListener = ::startActivityFumo
             }
         }
+
+        setContentView(binding.root)
     }
 }

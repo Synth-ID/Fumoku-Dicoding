@@ -14,6 +14,11 @@ class FumoAdapter() : RecyclerView.Adapter<FumoAdapter.ViewHolder>() {
     class ViewHolder(val binding: ItemFumoBinding) : RecyclerView.ViewHolder(binding.root)
 
     private val asyncListDiffer = AsyncListDiffer(this, Fumo.DiffCallback())
+    var onClickListener: ((ViewHolder, Fumo) -> Unit)? = null
+        get() = field
+        set(value) {
+            field = value
+        }
 
     fun submit(newList: List<Fumo>) {
         asyncListDiffer.submitList(newList)
@@ -39,18 +44,17 @@ class FumoAdapter() : RecyclerView.Adapter<FumoAdapter.ViewHolder>() {
 
             type.text = fumo.type.toString()
 
+            // Animation
+            image.transitionName = "image"
+
+            // Image
             Glide.with(root)
                 .load(fumo.image)
                 .into(image)
+        }
 
-            // On click
-            root.setOnClickListener {
-                Toast.makeText(root.context, fumo.idPadded, Toast.LENGTH_SHORT).show()
-            }
-
-            type.setOnClickListener {
-                Toast.makeText(root.context, fumo.type.toString(), Toast.LENGTH_SHORT).show()
-            }
+        holder.itemView.setOnClickListener {
+            onClickListener?.invoke(holder, fumo)
         }
     }
 

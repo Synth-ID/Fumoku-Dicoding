@@ -9,4 +9,11 @@
 
     <string name="about">About</string>
     <string name="search_fumo">Search fumo</string>
+
+    <string name="type">Type</string>
+    <string name="release_years">Release years</string>
+    <string name="rarity">Rarity</string>
+    <string name="secondhand_cost">Secondhand cost</string>
+    <string name="price_range">Price range</string>
+    <string name="wiki" translatable="false">Wiki</string>
 </resources>

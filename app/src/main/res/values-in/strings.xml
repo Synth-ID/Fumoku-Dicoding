@@ -4,4 +4,9 @@
 
     <string name="about">Tentang</string>
     <string name="search_fumo">Cari fumo</string>
+    <string name="type">Tipe</string>
+    <string name="release_years">Tahun rilis</string>
+    <string name="rarity">Langka</string>
+    <string name="secondhand_cost">Harga bekas</string>
+    <string name="price_range">Harga kisaran</string>
 </resources>
