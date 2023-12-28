@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import id.synth.fumoku.R
 import id.synth.fumoku.databinding.ItemFumoBinding
 import id.synth.fumoku.model.Fumo
 
