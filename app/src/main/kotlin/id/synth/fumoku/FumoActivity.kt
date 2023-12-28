@@ -109,7 +109,7 @@ class FumoActivity : AppCompatActivity() {
             }
 
             if (detail.link != null) {
-                wiki.setOnClickListener {
+                link.setOnClickListener {
                     startActivity(
                         Intent(Intent.ACTION_VIEW).apply {
                             data = Uri.parse(detail.link.toString())
@@ -117,7 +117,7 @@ class FumoActivity : AppCompatActivity() {
                     )
                 }
             } else {
-                wiki.visibility = View.GONE
+                link.visibility = View.GONE
             }
         }
 

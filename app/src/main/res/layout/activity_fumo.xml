@@ -54,14 +54,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:textAppearance="?attr/textAppearanceLabelLarge" />
+                    android:textAppearance="?attr/textAppearanceTitleLarge" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:textAppearance="?attr/textAppearanceTitleLarge" />
+                    android:textAppearance="?attr/textAppearanceDisplayMedium" />
 
                 <!-- Type -->
                 <androidx.appcompat.widget.LinearLayoutCompat
@@ -185,28 +185,20 @@
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <!-- Wiki -->
-                <androidx.appcompat.widget.LinearLayoutCompat
-                    android:id="@+id/wiki_layout"
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Link -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/link"
+                    style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+                    app:icon="@drawable/travel_explore"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="@string/wiki"
-                        android:textAppearance="?attr/textAppearanceLabelSmall" />
-
-                    <com.google.android.material.button.MaterialButton
-                        style="?attr/materialIconButtonStyle"
-                        app:icon="@drawable/travel_explore"
-                        android:id="@+id/wiki"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                </androidx.appcompat.widget.LinearLayoutCompat>
+                    android:text="@string/link" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
