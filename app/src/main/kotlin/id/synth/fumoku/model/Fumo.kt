@@ -13,7 +13,7 @@ data class Fumo(
     val id: UInt,
     val image: URL?,
 ) : Parcelable {
-    val idPadded: String get() = "%03d".format(id)
+    val idPadded: String get() = "%03d".format(id.toInt())
 
     @Throws(
         NumberFormatException::class,
